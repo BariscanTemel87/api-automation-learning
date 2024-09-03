@@ -12,9 +12,13 @@ import static org.junit.Assert.assertEquals;
 public class PetStoreSteps {
 
     private Response response;
+    //private String endpoint;
 
     @Given("I have the PetStore API endpoint")
     public void i_have_the_petStore_api_endpoint() {
+        //System.out.println("Setting up the PetStore API endpoint");
+        //String endpoint = "https://petstore.swagger.io/v2";
+        //this.endpoint = endpoint;
         RestAssured.baseURI = "https://petstore.swagger.io/v2";
     }
 

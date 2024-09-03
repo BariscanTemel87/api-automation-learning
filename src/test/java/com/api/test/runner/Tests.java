@@ -10,8 +10,12 @@ import org.junit.runner.RunWith;
     @RunWith(Cucumber.class)
     @CucumberOptions(
             features = "src/test/resources/features",
-            glue = {"steps"},
-            plugin = {"pretty", "html:target/cucumber-reports", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
+            glue = {"com.api.test.steps"},
+            plugin = {"pretty",
+                    "html:target/cucumber.html",
+                    "json:target/cucumber.json",
+                    "junit:target/cucumber.xml",
+                    "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
             monochrome = true
     )
     public class Tests {
